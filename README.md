@@ -1,16 +1,74 @@
-# habit_tracker
+# Habit Tracker
 
-A new Flutter project.
+A modern Flutter application designed to help users build and maintain healthy habits through daily tracking and progress monitoring.
+
+## Features
+
+- **User Profile Management**: Create and manage your personal profile
+- **Habit Management**: Create, edit, and delete habits
+- **Daily Tracking**: Mark habits as complete/incomplete
+- **Progress Monitoring**: Track your habit completion rates
+- **Customizable Themes**: Choose between light/dark modes and different color schemes
+- **Reminders**: Set reminders for your habits
+- **Responsive Design**: Works on both mobile and tablet devices
+
+## Screenshots
+
+[Add your app screenshots here]
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter (Latest Version)
+- Dart SDK
+- Android Studio / VS Code
+- iOS Simulator / Android Emulator
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository:
+```bash
+git clone [your-repository-url]
+```
+
+2. Navigate to the project directory:
+```bash
+cd habit_tracker
+```
+
+3. Install dependencies:
+```bash
+flutter pub get
+```
+
+4. Run the app:
+```bash
+flutter run
+```
+
+## Tech Stack
+
+- Flutter
+- Dart
+- Provider (State Management)
+- SharedPreferences (Local Storage)
+- Material Design Icons
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Flutter Team for the amazing framework
+- Material Design Icons for the icon set
+```
