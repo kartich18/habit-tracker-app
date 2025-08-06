@@ -12,6 +12,9 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'profile_screen.dart';
 import '../utils/storage_utils.dart';
 import 'dart:convert';
+import 'analytics_screen.dart';
+import 'statistics_screen.dart';
+import 'data_export_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -155,7 +158,7 @@ class _HomeScreenState extends State<HomeScreen>
         actions: [
           // In AppBar actions
           IconButton(
-            icon: Icon(MdiIcons.accountCircle), // replacing person
+            icon: Icon(MdiIcons.accountCircle),
             onPressed: () {
               Navigator.push(
                 context,
@@ -166,28 +169,56 @@ class _HomeScreenState extends State<HomeScreen>
             },
             tooltip: 'Profile',
           ),
-          AnimatedBuilder(
-            animation: _loadingController,
-            builder: (context, child) {
-              return Transform.rotate(
-                angle: _loadingController.value * 2 * 3.14,
-                child: IconButton(
-                  icon: Icon(MdiIcons.chartBar), // Update this line
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const TrackProgressScreen(),
-                      ),
-                    );
-                  },
-                  tooltip: 'Track Progress',
+          IconButton(
+            icon: Icon(MdiIcons.chartBar),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const TrackProgressScreen(),
                 ),
               );
             },
+            tooltip: 'Track Progress',
           ),
           IconButton(
-            icon: Icon(MdiIcons.refresh), // replacing refresh
+            icon: Icon(MdiIcons.chartLine),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const StatisticsScreen(),
+                ),
+              );
+            },
+            tooltip: 'Statistics',
+          ),
+          IconButton(
+            icon: Icon(MdiIcons.chartMultiple),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AnalyticsScreen(),
+                ),
+              );
+            },
+            tooltip: 'Advanced Analytics',
+          ),
+          IconButton(
+            icon: Icon(MdiIcons.fileExport),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DataExportScreen(),
+                ),
+              );
+            },
+            tooltip: 'Export Data',
+          ),
+          IconButton(
+            icon: Icon(MdiIcons.refresh),
             onPressed: () {
               _loadingController.forward(from: 0);
               _loadHabits();

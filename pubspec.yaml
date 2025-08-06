@@ -41,15 +41,25 @@ dependencies:
   
   # For charts and visualizations
   fl_chart: ^0.66.0
+  syncfusion_flutter_charts: ^23.2.7
+  syncfusion_flutter_gauges: ^23.2.7
+  syncfusion_flutter_maps: ^23.2.7
+  syncfusion_flutter_calendar: ^23.2.7
   
   # For date formatting
-  intl: ^0.19.0
+  intl: ^0.18.1
   
   # For UUID generation
   uuid: ^4.3.3
   provider: ^6.1.4
   flutter_staggered_animations: ^1.1.1
   material_design_icons_flutter: ^7.0.7296
+  
+  # For data export
+  csv: ^5.1.1
+  path_provider: ^2.1.2
+  share_plus: ^7.2.2
+  excel: ^4.0.2
 
 dev_dependencies:
   flutter_test:

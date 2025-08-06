@@ -12,10 +12,6 @@ A modern Flutter application designed to help users build and maintain healthy h
 - **Reminders**: Set reminders for your habits
 - **Responsive Design**: Works on both mobile and tablet devices
 
-## Screenshots
-
-[Add your app screenshots here]
-
 ## Getting Started
 
 ### Prerequisites
@@ -55,20 +51,5 @@ flutter run
 - SharedPreferences (Local Storage)
 - Material Design Icons
 
-## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Flutter Team for the amazing framework
-- Material Design Icons for the icon set
 ```
