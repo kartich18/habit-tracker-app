@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:syncfusion_flutter_charts/charts.dart' hide ChartSeries;
 import 'package:intl/intl.dart';
-import '../models/habit.dart';
-import '../services/habit_service.dart';
-import '../services/data_analysis_service.dart';
+import '../../models/habit.dart';
+import '../../services/habit_service.dart';
 
 class StatisticsScreen extends StatefulWidget {
   const StatisticsScreen({super.key});
@@ -17,7 +16,6 @@ class StatisticsScreen extends StatefulWidget {
 
 class _StatisticsScreenState extends State<StatisticsScreen> with SingleTickerProviderStateMixin {
   final HabitService _habitService = HabitService();
-  final DataAnalysisService _dataAnalysisService = DataAnalysisService();
   List<Habit> _habits = [];
   bool _isLoading = true;
   late TabController _tabController;
@@ -254,7 +252,7 @@ class _StatisticsScreenState extends State<StatisticsScreen> with SingleTickerPr
                     dataLabelSettings: const DataLabelSettings(isVisible: true),
                     gradient: LinearGradient(
                       colors: [
-                        Theme.of(context).colorScheme.primary.withOpacity(0.7),
+                        Theme.of(context).colorScheme.primary.withValues(alpha: 0.7),
                         Theme.of(context).colorScheme.primary,
                       ],
                       begin: Alignment.bottomCenter,
@@ -340,8 +338,8 @@ class _StatisticsScreenState extends State<StatisticsScreen> with SingleTickerPr
                     markerSettings: const MarkerSettings(isVisible: true),
                     gradient: LinearGradient(
                       colors: [
-                        Theme.of(context).colorScheme.primary.withOpacity(0.7),
-                        Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                        Theme.of(context).colorScheme.primary.withValues(alpha: 0.7),
+                        Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                       ],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,

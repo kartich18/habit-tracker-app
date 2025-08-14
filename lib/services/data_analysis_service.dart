@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:io';
 import 'dart:math' as math;
 import 'package:csv/csv.dart';
@@ -274,7 +273,6 @@ class DataAnalysisService {
       
       // Create sheets
       final summarySheet = excel['Summary'];
-      final detailsSheet = excel['Habit Details'];
       final completionsSheet = excel['Completion Dates'];
       
       // Add headers to summary sheet

@@ -88,15 +88,49 @@ See [FIREBASE_SETUP.md](FIREBASE_SETUP.md) for detailed instructions.
 
 ```
 lib/
-├── models/          # Data models (User, Habit)
-├── providers/       # State management (Theme, Auth)
-├── screens/         # UI screens
-│   ├── auth/        # Authentication screens
-│   ├── onboarding/  # User onboarding
-│   └── main/        # Main app screens
-├── services/        # Business logic services
-├── utils/           # Utility functions
-└── widgets/         # Reusable UI components
+├── main.dart                    # App entry point
+├── firebase_options.dart        # Firebase configuration
+├── models/                      # Data models (User, Habit)
+│   └── index.dart              # Export all models
+├── providers/                   # State management (Theme, Auth)
+│   └── index.dart              # Export all providers
+├── services/                    # Business logic services
+│   ├── habit_service.dart       # Basic habit operations
+│   ├── firebase_service.dart    # Firebase integration
+│   ├── hybrid_habit_service.dart # Smart local+cloud storage
+│   ├── data_analysis_service.dart # Data processing & export
+│   └── index.dart              # Export all services
+├── utils/                       # Utility functions
+│   └── storage_utils.dart      # Local storage operations
+├── widgets/                     # Reusable UI components
+│   ├── habit_list_item.dart    # Individual habit display
+│   └── index.dart              # Export all widgets
+└── screens/                     # UI screens (organized by feature)
+    ├── welcome_screen.dart      # App entry point with auth options
+    ├── index.dart               # Export all screen categories
+    ├── auth/                    # Authentication screens
+    │   ├── login_screen.dart    # User login
+    │   ├── signup_screen.dart   # User registration
+    │   ├── forgot_password_screen.dart # Password reset
+    │   └── index.dart           # Export all auth screens
+    ├── onboarding/              # User onboarding
+    │   ├── onboarding_screen.dart # App introduction & theme
+    │   ├── profile_creation_screen.dart # User profile setup
+    │   └── index.dart           # Export all onboarding screens
+    ├── main/                    # Core application screens
+    │   ├── home_screen.dart     # Main dashboard
+    │   ├── profile_screen.dart  # User profile management
+    │   └── index.dart           # Export all main screens
+    ├── habits/                  # Habit management
+    │   ├── add_habit_screen.dart # Create new habits
+    │   ├── habit_details_screen.dart # View & edit habits
+    │   ├── track_progress_screen.dart # Track progress
+    │   └── index.dart           # Export all habit screens
+    └── analytics/               # Data analysis & reporting
+        ├── analytics_screen.dart # Comprehensive analytics
+        ├── statistics_screen.dart # Statistical charts
+        ├── data_export_screen.dart # Export to CSV/Excel
+        └── index.dart           # Export all analytics screens
 ```
 
 ## 🔐 Authentication Flow

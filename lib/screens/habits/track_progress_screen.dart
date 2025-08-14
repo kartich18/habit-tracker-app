@@ -1,10 +1,10 @@
 // ignore_for_file: library_private_types_in_public_api, deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:fl_chart/fl_chart.dart';
 import 'package:table_calendar/table_calendar.dart';
-import '../models/habit.dart';
-import '../services/habit_service.dart';
+import 'package:fl_chart/fl_chart.dart';
+import '../../models/habit.dart';
+import '../../services/habit_service.dart';
 
 class TrackProgressScreen extends StatefulWidget {
   const TrackProgressScreen({super.key});

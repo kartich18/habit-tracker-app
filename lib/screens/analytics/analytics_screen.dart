@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_charts/charts.dart' hide ChartSeries;
 import 'package:syncfusion_flutter_gauges/gauges.dart';
-import '../models/habit.dart';
-import '../services/habit_service.dart';
-import '../services/data_analysis_service.dart';
+import '../../models/habit.dart';
+import '../../services/habit_service.dart';
+import '../../services/data_analysis_service.dart';
 
 class AnalyticsScreen extends StatefulWidget {
   const AnalyticsScreen({super.key});
@@ -322,8 +322,8 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> with SingleTickerProv
                     borderWidth: 2,
                     gradient: LinearGradient(
                       colors: [
-                        Theme.of(context).colorScheme.primary.withOpacity(0.7),
-                        Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                        Theme.of(context).colorScheme.primary.withValues(alpha: 0.7),
+                        Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                       ],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
@@ -381,7 +381,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> with SingleTickerProv
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
-                        color: strengthColor.withOpacity(0.2),
+                        color: strengthColor.withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Text(

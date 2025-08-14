@@ -2,19 +2,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import '../models/habit.dart';
-import '../services/habit_service.dart';
-import 'add_habit_screen.dart';
-import 'habit_details_screen.dart';
-import '../widgets/habit_list_item.dart';
-import 'track_progress_screen.dart';
+import '../../models/habit.dart';
+import '../../services/habit_service.dart';
+import '../habits/add_habit_screen.dart';
+import '../habits/habit_details_screen.dart';
+import '../../widgets/habit_list_item.dart';
+import '../habits/track_progress_screen.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'profile_screen.dart';
-import '../utils/storage_utils.dart';
-import 'dart:convert';
-import 'analytics_screen.dart';
-import 'statistics_screen.dart';
-import 'data_export_screen.dart';
+import '../../utils/storage_utils.dart';
+import '../analytics/analytics_screen.dart';
+import '../analytics/statistics_screen.dart';
+import '../analytics/data_export_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

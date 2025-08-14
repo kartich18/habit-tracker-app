@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'onboarding_screen.dart';
+import 'onboarding/onboarding_screen.dart';
 import 'auth/login_screen.dart';
 import 'auth/signup_screen.dart';
 

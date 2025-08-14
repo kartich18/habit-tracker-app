@@ -56,11 +56,14 @@ class StorageUtils {
 
   static Future<Color> getPrimaryColor() async {
     final prefs = await SharedPreferences.getInstance();
-    return Color(prefs.getInt(_primaryColorKey) ?? Colors.blue.value);
+    final colorValue = prefs.getInt(_primaryColorKey) ?? 0xFF2196F3; // Default blue color value
+    return Color(colorValue);
   }
 
   static Future<void> savePrimaryColor(Color color) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setInt(_primaryColorKey, color.value);
+    // Convert color to integer value for storage
+    final colorValue = (color.r.round() << 16) | (color.g.round() << 8) | color.b.round();
+    await prefs.setInt(_primaryColorKey, colorValue);
   }
 }

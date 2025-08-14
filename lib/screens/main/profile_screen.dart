@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import '../utils/storage_utils.dart';
-import '../models/user.dart';
-import 'dart:convert';
+import '../../utils/storage_utils.dart';
+import '../../models/user.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

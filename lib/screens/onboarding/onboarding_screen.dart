@@ -1,10 +1,10 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:provider/provider.dart';
-import '../providers/theme_provider.dart';
-import 'login_screen.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import '../../providers/theme_provider.dart';
+import 'profile_creation_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -214,7 +214,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             // In the _buildButton method, update the navigation:
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => const LoginScreen()),
+              MaterialPageRoute(builder: (context) => const ProfileCreationScreen()),
             );
           }
         },
